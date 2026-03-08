@@ -1,0 +1,72 @@
+{
+  "updatedAt": "2026-03-08T12:30:00+08:00",
+  "feishu": {
+    "topics": [
+      "AI Agent 团队协作流程",
+      "企业知识库 + RAG 落地",
+      "飞书自动化运营 SOP",
+      "多模型路由与成本控制",
+      "内部 AI 应用安全边界"
+    ],
+    "articles": [
+      {
+        "title": "干货分享！从0到1打造一个知识库AI Agent（智能体）",
+        "tag": "知识管理",
+        "idea": "从零搭建知识库 Agent 的实践记录",
+        "url": "https://zhuanlan.zhihu.com/p/1889234524614923719"
+      },
+      {
+        "title": "飞书多维表格自动化怎么用？一篇讲透流程配置与任务流转！",
+        "tag": "运营自动化",
+        "idea": "飞书官方内容，围绕自动化流程与协作",
+        "url": "https://www.feishu.cn/content/article/7581775868524104882"
+      }
+    ]
+  },
+  "wechat": {
+    "topics": [
+      "AI 提效实操合集",
+      "私域增长与内容闭环",
+      "AIGC 版权与合规",
+      "智能客服与转化优化",
+      "数字人内容矩阵"
+    ],
+    "articles": [
+      {
+        "title": "适用于所有公众号：最有效最实用的选题方法",
+        "tag": "选题",
+        "idea": "公众号选题方法论与素材库思路",
+        "url": "https://www.woshipm.com/operate/1042305.html"
+      },
+      {
+        "title": "从数据到愉悦体验：超越转化漏斗的商务模式设计",
+        "tag": "增长",
+        "idea": "围绕转化漏斗的四步方法",
+        "url": "https://experienceleague.adobe.com/zh-hans/perspectives/from-data-to-delight-designing-commerce-beyond-the-conversion-funnel"
+      }
+    ]
+  },
+  "xiaohongshu": {
+    "topics": [
+      "AI 工具实测",
+      "效率神器对比",
+      "真实工作流分享",
+      "模板化内容生产",
+      "副业与个人品牌"
+    ],
+    "articles": [
+      {
+        "title": "开工第一周：用几百元组建5个AI员工的AI办公工作流实战复盘",
+        "tag": "工具流",
+        "idea": "7天内搭建AI工作流的实操案例",
+        "url": "https://chatexcel.com/blog/ai-employees-for-the-start-of-the-work-season/"
+      },
+      {
+        "title": "实战小项目：小红书爆款笔记项目SOP文档",
+        "tag": "文案",
+        "idea": "爆款笔记结构与SOP拆解",
+        "url": "https://blog.cxyxkj.com/posts/%E5%AE%9E%E6%88%98%E5%B0%8F%E9%A1%B9%E7%9B%AE%E5%B0%8F%E7%BA%A2%E4%B9%A6%E7%88%86%E6%AC%BE%E7%AC%94%E8%AE%B0%E9%A1%B9%E7%9B%AE-sop-%E6%96%87%E6%A1%A3/"
+      }
+    ]
+  }
+}

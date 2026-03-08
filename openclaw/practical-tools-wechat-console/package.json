@@ -1,0 +1,17 @@
+{
+  "name": "nas-geek-console",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OpenClaw NAS Geek Console MVP",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

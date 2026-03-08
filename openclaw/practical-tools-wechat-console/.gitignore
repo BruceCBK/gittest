@@ -1,0 +1,4 @@
+node_modules/
+.env
+data/wechat-articles-cache.json
+npm-debug.log*

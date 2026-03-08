@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAS Geek Console</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="dot"></div>
+          <div>
+            <h1>NAS Geek Console</h1>
+            <p>OpenClaw x 媒体创排</p>
+          </div>
+        </div>
+        <nav>
+          <button class="menu-btn active" data-view="openclawView">OpenClaw 控制台</button>
+          <button class="menu-btn" data-view="mediaView">自媒体栏</button>
+        </nav>
+        <div class="sidebar-foot">
+          <small id="lanHint">LAN: -</small>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section id="openclawView" class="view active">
+          <header class="view-header">
+            <h2>OpenClaw 控制台</h2>
+            <div class="actions">
+              <button id="refreshAllBtn">一键刷新</button>
+              <button id="restartGatewayBtn" class="danger">重启 Gateway</button>
+            </div>
+          </header>
+
+          <section class="grid cards">
+            <article class="card">
+              <h3>应用状态</h3>
+              <pre id="healthCard" class="mono small">加载中...</pre>
+            </article>
+            <article class="card">
+              <h3>OpenClaw 状态摘要</h3>
+              <pre id="statusCard" class="mono small">加载中...</pre>
+            </article>
+          </section>
+
+          <section class="grid two-col">
+            <article class="card">
+              <h3>大模型配置（快速改）</h3>
+              <label>agents.defaults.model.primary</label>
+              <input id="modelPrimaryInput" placeholder="例如 gmn/gpt-5.3-codex" />
+              <div class="row">
+                <button id="saveModelPrimaryBtn">保存模型配置</button>
+                <button id="reloadConfigBtn" class="ghost">重新加载配置</button>
+              </div>
+              <p id="modelMsg" class="msg"></p>
+            </article>
+
+            <article class="card">
+              <h3>Skills 管理（增删改查）</h3>
+              <div class="row">
+                <input id="skillSlugInput" placeholder="skill slug，如 weather" />
+                <button id="installSkillBtn">安装</button>
+                <button id="updateSkillBtn">更新</button>
+                <button id="removeSkillBtn" class="danger">卸载</button>
+              </div>
+              <div class="row">
+                <button id="updateAllSkillsBtn" class="ghost">更新全部 Skills</button>
+                <button id="refreshSkillsBtn" class="ghost">刷新列表</button>
+              </div>
+              <div id="skillsList" class="list-panel"></div>
+              <p id="skillsMsg" class="msg"></p>
+            </article>
+          </section>
+
+          <section class="grid two-col">
+            <article class="card">
+              <h3>记忆管理（memory / MEMORY.md）</h3>
+              <div class="row">
+                <input id="newMemoryFileInput" placeholder="新文件名，如 2026-03-09.md" />
+                <button id="createMemoryFileBtn">新建文件</button>
+                <button id="refreshMemoryFilesBtn" class="ghost">刷新文件</button>
+              </div>
+              <div class="memory-layout">
+                <div id="memoryFiles" class="list-panel narrow"></div>
+                <div>
+                  <div class="row">
+                    <strong id="currentMemoryPath">未选择文件</strong>
+                    <button id="saveMemoryBtn">保存</button>
+                  </div>
+                  <textarea id="memoryEditor" class="editor" placeholder="选择左侧文件后编辑..."></textarea>
+                </div>
+              </div>
+              <p id="memoryMsg" class="msg"></p>
+            </article>
+
+            <article class="card">
+              <h3>OpenClaw 配置可视化编辑（JSON）</h3>
+              <div class="row">
+                <button id="saveConfigBtn">保存配置</button>
+                <button id="formatConfigBtn" class="ghost">格式化 JSON</button>
+                <button id="reloadConfigTextBtn" class="ghost">重载</button>
+              </div>
+              <textarea id="configEditor" class="editor large" placeholder="配置加载中..."></textarea>
+              <p id="configMsg" class="msg"></p>
+            </article>
+          </section>
+        </section>
+
+        <section id="mediaView" class="view">
+          <header class="view-header">
+            <h2>自媒体栏</h2>
+            <div class="actions">
+              <button id="refreshTrendingBtn">刷新热门数据</button>
+            </div>
+          </header>
+
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="feishu">飞书</button>
+            <button class="tab-btn" data-tab="wechat">公众号</button>
+            <button class="tab-btn" data-tab="xiaohongshu">小红书</button>
+          </div>
+
+          <section id="wechatRecoPanel" class="media-card wechat-reco-panel" hidden>
+            <h4>公众号推荐（实用软件 + 免费工具）</h4>
+            <div class="wechat-search-row">
+              <input
+                id="wechatSearchInput"
+                placeholder="输入关键词，如：免费 OCR、效率工具测评、开源替代"
+              />
+              <button id="wechatSearchBtn">搜索</button>
+            </div>
+            <p id="wechatSearchMsg" class="msg"></p>
+            <div id="wechatRecoList" class="wechat-reco-list"></div>
+          </section>
+
+          <div id="mediaPanel" class="media-panel"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
